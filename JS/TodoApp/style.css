@@ -1,0 +1,112 @@
+html, body {
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-app {
+    width: min(80%, 1024px);
+    padding: 20px 10px;
+    background-color: #0c4a6e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.todo-app h1 {
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.todo-app__input-form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.todo-app__input-form input {
+    width: 100%;
+    padding: 10px 20px;
+    border: 2px solid #3b82f6;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1.25rem;
+}
+
+.todo-app__list {
+    width: 80%;
+    margin-top: 10px;
+    list-style: none;
+}
+
+.todo-app__list .task {
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    cursor: pointer;
+}
+
+.todo-app__list .task .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.todo-app__list .task .container .circle {
+    height: 80%;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 50%;
+    background-color: #4a7e9c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.todo-app__list .task .container .circle .check-icon {
+    color: transparent; /* Palomita invisible cuando la tarea no está completada */
+    font-size: 1.25rem; /* Tamaño del ícono */
+}
+
+.todo-app__list .task.completed .container .circle {
+    background-color: #3b82f6; /* Color del círculo cuando la tarea está completada */
+}
+
+.todo-app__list .task.completed .container .circle .check-icon {
+    color: #fff; /* Color de la palomita cuando la tarea está completada */
+}
+
+.todo-app__list .task .close-icon {
+    color: #fff;
+    cursor: pointer;
+    z-index: 9;
+    font-size: 1.25rem;
+}
+
+.todo-app__list .task.completed .container .circle {
+    background-color: #17ab2d;
+}
+
+.todo-app__list .task.completed .container span {
+    text-decoration: line-through;
+}
+
+.todo-app__list .task.completed .close-icon {
+    text-decoration: line-through;
+    pointer-events: none;
+}
